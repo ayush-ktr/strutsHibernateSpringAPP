@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Feb 26, 2020 2:07:40 PM by Hibernate Tools 3.5.0.Final -->
+<hibernate-mapping>
+    <class name="com.highradius.model.Movie" table="MOVIES">
+        <id name="id" type="int">
+            <column name="pk_id" />
+            <generator class="native" />
+        </id>
+        <property name="title" type="java.lang.String">
+            <column name="title" />
+        </property>
+        <property name="description" type="java.lang.String">
+            <column name="description" />
+        </property>
+        <property name="releaseYear" type="int">
+            <column name="RELEASE_YEAR" />
+        </property>
+        <property name="language" type="java.lang.String">
+            <column name="LANGUAGE" />
+        </property>
+        <property name="length" type="double">
+            <column name="LENGTH" />
+        </property>
+        <property name="rating" type="double">
+            <column name="RATING" />
+        </property>
+        <property name="specialFeatures" type="java.lang.String">
+            <column name="SPECIAL_FEATURES" />
+        </property>
+        <property name="category" type="java.lang.String">
+            <column name="CATEGORY" />
+        </property>
+    </class>
+</hibernate-mapping>

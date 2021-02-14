@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!--
+  ~  Copyright 2006-2018 HighRadius Corporation 
+  -->
+
+<hibernate-mapping>
+  <class  name="com.highradius.model.CustomerContact" table="customer_contact">
+    <id name="pkCustomerContactId" type="int">
+      <column name="pk_customer_contact_id"/>
+      <generator class="identity"/>
+    </id>
+    <property name="accountId" type="java.lang.Integer">
+            <column name="fk_account_id"></column>
+    </property>
+    <property name="title" type="string">
+      <column length="40" name="title"/>
+    </property>
+    <property name="firstName" type="string">
+      <column length="120" name="first_name"/>
+    </property>
+    <property name="lastName" type="string">
+      <column length="120" name="last_name"/>
+    </property>
+    <property name="department" type="string">
+      <column length="40" name="department"/>
+    </property>
+    <property name="role" type="string">
+      <column length="40" name="role"/>
+    </property>
+    <property name="emailId" type="string">
+      <column length="40" name="email_id"/>
+    </property>
+    <property name="phoneBusiness" type="string">
+      <column length="40" name="phone_business"/>
+    </property>
+    <property name="phoneBusinessNorm" type="string">
+      <column length="40" name="phone_business_norm"/>
+    </property>
+    <property name="phoneMobile" type="string">
+      <column length="40" name="phone_mobile"/>
+    </property>
+     <property name="phoneMobileNorm" type="string">
+      <column length="40" name="phone_mobile_norm"/>
+    </property>
+    <property name="phoneExtension" type="string">
+      <column length="40" name="phone_extension"/>
+    </property>
+     <property name="phoneBusinessExtensionNorm" type="string">
+      <column length="40" name="phone_business_extension_norm"/>
+    </property>
+    <property name="phoneMobileExtensionNorm" type="string">
+      <column length="40" name="phone_mobile_extension_norm"/>
+    </property>
+    <property name="address" type="string">
+      <column length="3200" name="address"/>
+    </property>
+    <property name="fax" type="string">
+      <column length="40" name="fax"/>
+    </property>
+    <property name="city" type="string">
+      <column length="40" name="city"/>
+    </property>
+    <property name="state" type="string">
+      <column length="40" name="state"/>
+    </property>
+    <property name="zip" type="string">
+      <column length="40" name="zip"/>
+    </property>
+    <property name="country" type="string">
+      <column length="10" name="country"/>
+    </property>
+    <property name="notes" type="string">
+      <column length="255" name="notes"/>
+    </property>
+    
+    <property name="isCampaignEligible" type="boolean">
+   	 	<column name="is_campaign_eligible"/>
+	</property>
+    
+    
+    <property name="createUserForContact" type="boolean">
+			<column name="is_create_user_for_contact"></column>
+		</property>
+
+		<property name="fkSecurityRoleId" type="java.lang.Integer">
+			<column name="fk_security_role_id"></column>
+		</property>
+
+		<property name="fkUserId" type="java.lang.Integer">
+			<column name="fk_user_id"></column>
+		</property>
+		
+		<property name="deleted" type="boolean" insert="false" update="true" >
+			<column name="is_deleted"></column>
+		</property>
+		<property name="referenceField1" type="string">
+			<column name="reference_field1"></column>
+		</property>
+		<property name="referenceField2" type="string">
+			<column name="reference_field2"></column>
+		</property>
+		<property name="referenceField3" type="string">
+			<column name="reference_field3"></column>
+		</property>
+		<property name="referenceField4" type="string">
+			<column name="reference_field4"></column>
+		</property>
+		<property name="referenceField5" type="string">
+			<column name="reference_field5"></column>
+		</property>	
+	    <property name="countryCode" type="string">
+	      <column length="10" name="country_code"/>
+	    </property>
+	    <property name="invContact" type="string">
+			<column name="inv_contact"></column>
+		</property>	
+   </class>
+</hibernate-mapping>

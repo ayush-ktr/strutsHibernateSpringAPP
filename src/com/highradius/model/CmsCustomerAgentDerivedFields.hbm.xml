@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- ~ Copyright 2006-2018 HighRadius Corporation -->
+<hibernate-mapping>
+	<class
+		name="com.highradius.model.CmsCustomerAgentDerivedFields"
+		table="cms_customer_agent_derived_fields">
+		<id name="pkCmsCustomerAgentDerivedFieldsId"
+			type="java.lang.Integer">
+			<column name="pk_cms_customer_agent_derived_fields_id" />
+			<generator class="identity" />
+		</id>
+		<property name="fkAccountId" type="java.lang.Integer">
+			<column name="fk_account_id" />
+		</property>
+		<property name="fkCustomerMapId" type="java.lang.Integer">
+			<column name="fk_customer_map_id" />
+		</property>
+		<property name="globalCurrency" type="java.lang.String">
+			<column name="global_currency" />
+		</property>
+		<property name="localCurrency" type="java.lang.String">
+			<column name="local_currency" />
+		</property>
+		<property name="documentCurrency" type="java.lang.String">
+			<column name="document_currency" />
+		</property>
+		<property name="invAmtGlobalCurrency"
+			type="java.math.BigDecimal">
+			<column name="inv_amt_global_currency" />
+		</property>
+		<property name="invAmtLocalCurrency" type="java.lang.String">
+			<column name="inv_amt_local_currency" />
+		</property>
+		<property name="invAmtDocCurrency" type="java.lang.String">
+			<column name="inv_amt_doc_currency" />
+		</property>
+		<property name="currentOpenAmtGlobalCurrency"
+			type="java.math.BigDecimal">
+			<column name="current_open_amt_global_currency" />
+		</property>
+		<property name="currentOpenAmtLocalCurrency"
+			type="java.lang.String">
+			<column name="current_open_amt_local_currency" />
+		</property>
+		<property name="currentOpenAmtDocCurrency"
+			type="java.lang.String">
+			<column name="current_open_amt_doc_currency" />
+		</property>
+		<property name="pastDueAmtGlobalCurrency"
+			type="java.math.BigDecimal">
+			<column name="past_due_amt_global_currency" />
+		</property>
+		<property name="pastDueAmtLocalCurrency"
+			type="java.lang.String">
+			<column name="past_due_amt_local_currency" />
+		</property>
+		<property name="pastDueAmtDocCurrency"
+			type="java.lang.String">
+			<column name="past_due_amt_doc_currency" />
+		</property>
+		<property name="pastDueBucket0AmtGlobalCurrency" type="java.math.BigDecimal">
+            <column name="past_due_bucket0_amt_global_currency" />
+        </property>
+        <property name="pastDueBucket0AmtLocalCurrency" type="java.lang.String">
+            <column name="past_due_bucket0_amt_local_currency" />
+        </property>
+        <property name="pastDueBucket0AmtDocCurrency" type="java.lang.String">
+            <column name="past_due_bucket0_amt_doc_currency" />
+        </property>
+		<property name="pastDueBucket1AmtGlobalCurrency"
+			type="java.math.BigDecimal">
+			<column name="past_due_bucket1_amt_global_currency" />
+		</property>
+		<property name="pastDueBucket1AmtLocalCurrency"
+			type="java.lang.String">
+			<column name="past_due_bucket1_amt_local_currency" />
+		</property>
+		<property name="pastDueBucket1AmtDocCurrency"
+			type="java.lang.String">
+			<column name="past_due_bucket1_amt_doc_currency" />
+		</property>
+		<property name="pastDueBucket2AmtGlobalCurrency"
+			type="java.math.BigDecimal">
+			<column name="past_due_bucket2_amt_global_currency" />
+		</property>
+		<property name="pastDueBucket2AmtLocalCurrency"
+			type="java.lang.String">
+			<column name="past_due_bucket2_amt_local_currency" />
+		</property>
+		<property name="pastDueBucket2AmtDocCurrency"
+			type="java.lang.String">
+			<column name="past_due_bucket2_amt_doc_currency" />
+		</property>
+		<property name="pastDueBucket3AmtGlobalCurrency"
+			type="java.math.BigDecimal">
+			<column name="past_due_bucket3_amt_global_currency" />
+		</property>
+		<property name="pastDueBucket3AmtLocalCurrency"
+			type="java.lang.String">
+			<column name="past_due_bucket3_amt_local_currency" />
+		</property>
+		<property name="pastDueBucket3AmtDocCurrency"
+			type="java.lang.String">
+			<column name="past_due_bucket3_amt_doc_currency" />
+		</property>
+		<property name="pastDueBucket4AmtGlobalCurrency"
+			type="java.math.BigDecimal">
+			<column name="past_due_bucket4_amt_global_currency" />
+		</property>
+		<property name="pastDueBucket4AmtLocalCurrency"
+			type="java.lang.String">
+			<column name="past_due_bucket4_amt_local_currency" />
+		</property>
+		<property name="pastDueBucket4AmtDocCurrency"
+			type="java.lang.String">
+			<column name="past_due_bucket4_amt_doc_currency" />
+		</property>
+		<property name="pastDueBucket5AmtGlobalCurrency"
+			type="java.math.BigDecimal">
+			<column name="past_due_bucket5_amt_global_currency" />
+		</property>
+		<property name="pastDueBucket5AmtLocalCurrency"
+			type="java.lang.String">
+			<column name="past_due_bucket5_amt_local_currency" />
+		</property>
+		<property name="pastDueBucket5AmtDocCurrency"
+			type="java.lang.String">
+			<column name="past_due_bucket5_amt_doc_currency" />
+		</property>
+		<property name="pastDueBucket6AmtGlobalCurrency"
+			type="java.math.BigDecimal">
+			<column name="past_due_bucket6_amt_global_currency" />
+		</property>
+		<property name="pastDueBucket6AmtLocalCurrency"
+			type="java.lang.String">
+			<column name="past_due_bucket6_amt_local_currency" />
+		</property>
+		<property name="pastDueBucket6AmtDocCurrency"
+			type="java.lang.String">
+			<column name="past_due_bucket6_amt_doc_currency" />
+		</property>
+		<property name="pastDueBucket7AmtGlobalCurrency"
+			type="java.math.BigDecimal">
+			<column name="past_due_bucket7_amt_global_currency" />
+		</property>
+		<property name="pastDueBucket7AmtLocalCurrency"
+			type="java.lang.String">
+			<column name="past_due_bucket7_amt_local_currency" />
+		</property>
+		<property name="pastDueBucket7AmtDocCurrency"
+			type="java.lang.String">
+			<column name="past_due_bucket7_amt_doc_currency" />
+		</property>
+		<property name="pastDueBucket8AmtGlobalCurrency"
+			type="java.math.BigDecimal">
+			<column name="past_due_bucket8_amt_global_currency" />
+		</property>
+		<property name="pastDueBucket8AmtLocalCurrency"
+			type="java.lang.String">
+			<column name="past_due_bucket8_amt_local_currency" />
+		</property>
+		<property name="pastDueBucket8AmtDocCurrency"
+			type="java.lang.String">
+			<column name="past_due_bucket8_amt_doc_currency" />
+		</property>
+		<property name="pastDueBucket9AmtGlobalCurrency"
+			type="java.math.BigDecimal">
+			<column name="past_due_bucket9_amt_global_currency" />
+		</property>
+		<property name="pastDueBucket9AmtLocalCurrency"
+			type="java.lang.String">
+			<column name="past_due_bucket9_amt_local_currency" />
+		</property>
+		<property name="pastDueBucket9AmtDocCurrency"
+			type="java.lang.String">
+			<column name="past_due_bucket9_amt_doc_currency" />
+		</property>
+		<property name="pastDueBucket10AmtGlobalCurrency"
+			type="java.math.BigDecimal">
+			<column name="past_due_bucket10_amt_global_currency" />
+		</property>
+		<property name="pastDueBucket10AmtLocalCurrency"
+			type="java.lang.String">
+			<column name="past_due_bucket10_amt_local_currency" />
+		</property>
+		<property name="pastDueBucket10AmtDocCurrency"
+			type="java.lang.String">
+			<column name="past_due_bucket10_amt_doc_currency" />
+		</property>
+		<property name="pastDueBucket11AmtGlobalCurrency"
+			type="java.math.BigDecimal">
+			<column name="past_due_bucket11_amt_global_currency" />
+		</property>
+		<property name="pastDueBucket11AmtLocalCurrency"
+			type="java.lang.String">
+			<column name="past_due_bucket11_amt_local_currency" />
+		</property>
+		<property name="pastDueBucket11AmtDocCurrency"
+			type="java.lang.String">
+			<column name="past_due_bucket11_amt_doc_currency" />
+		</property>
+		<property name="pastDueBucket12AmtGlobalCurrency"
+			type="java.math.BigDecimal">
+			<column name="past_due_bucket12_amt_global_currency" />
+		</property>
+		<property name="pastDueBucket12AmtLocalCurrency"
+			type="java.lang.String">
+			<column name="past_due_bucket12_amt_local_currency" />
+		</property>
+		<property name="pastDueBucket12AmtDocCurrency"
+			type="java.lang.String">
+			<column name="past_due_bucket12_amt_doc_currency" />
+		</property>
+	</class>
+</hibernate-mapping>

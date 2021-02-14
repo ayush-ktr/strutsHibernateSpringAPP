@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+<hibernate-mapping>
+	<class name="com.highradius.model.Country" table="country">
+		<id name="code" type="string">
+			<column name="Code"/>
+		</id>
+		<property name="name" type="string">
+			<column name="Name" not-null="true"/>
+		</property>
+		<property name="continent" column="Continent">
+			<type name="org.hibernate.type.EnumType">
+		        <param name="enumClass">com.highradius.model.Continent</param>
+		    </type>
+		</property>
+		<property name="region" type="string">
+			<column name="Region"/>
+		</property>
+		<property name="surfaceArea" type="float">
+			<column name="SurfaceArea"/>
+		</property>
+		<property name="indepYear" type="integer">
+			<column name="IndepYear"/>
+		</property>
+		<property name="population" type="integer">
+			<column name="Population"/>
+		</property>
+		<property name="lifeExpectency" type="float">
+			<column name="LifeExpectancy"/>
+		</property>
+		<property name="gnp" type="float">
+			<column name="GNP"/>
+		</property>
+		<property name="gnpOld" type="float">
+			<column name="GNPOld"/>
+		</property>
+		<property name="localName" type="string">
+			<column name="LocalName"/>
+		</property>
+		<property name="governmentForm" type="string">
+			<column name="GovernmentForm"/>
+		</property>
+		<property name="headOfState" type="string">
+			<column name="HeadOfState"/>
+		</property>
+		<property name="capital" type="integer">
+			<column name="Capital"/>
+		</property>
+		<property name="code2" type="string">
+			<column name="Code2"/>
+		</property>
+	</class>
+</hibernate-mapping>

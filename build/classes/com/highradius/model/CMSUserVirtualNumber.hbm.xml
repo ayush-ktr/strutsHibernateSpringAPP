@@ -1,0 +1,46 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!--
+  ~  Copyright 2006-2018 HighRadius Corporation 
+  -->
+
+<!-- Generated Mar 26, 2015 8:39:21 AM by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="com.highradius.model.CMSUserVirtualNumber" table="cms_user_virtual_number">
+        <id name="pkUserVirtualNumberId" type="java.lang.Integer">
+            <column name="pk_user_virtual_number_id" />
+            <generator class="identity" />
+        </id>
+        <property name="fkAccountId" type="java.lang.Integer">
+            <column name="fk_account_id"/>
+        </property>
+        <many-to-one class="com.highradius.model.LuUser" name="luUser" lazy="false" fetch="select" >
+        	<column name="fk_user_id"></column>
+        </many-to-one>
+        <property name="virtualNumber" type="java.lang.String">
+            <column name="virtual_number" />
+        </property>
+        <property name="createUser" type="java.lang.String">
+            <column name="create_user" />
+        </property>
+        <property name="createTime" type="java.util.Date">
+            <column name="create_time" />
+        </property>
+        <property name="updateUser" type="java.lang.String">
+            <column name="update_user" />
+        </property>
+        <property name="updateTime" type="java.util.Date">
+            <column name="update_time" />
+        </property>
+        <property name="sipUserName" type="java.lang.String">
+            <column name="sip_user_name" />
+        </property>
+        <property name="sipPassword" type="java.lang.String">
+            <column name="sip_password" />
+        </property>
+        <property name="incomingNumber" type="java.lang.String">
+            <column name="incoming_number" />
+        </property>
+    </class>
+</hibernate-mapping>

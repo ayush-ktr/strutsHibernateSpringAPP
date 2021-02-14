@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!--
+  ~  Copyright 2006-2018 HighRadius Corporation 
+  -->
+
+<hibernate-mapping>
+  
+  <class name="com.highradius.model.CMSCustomerCommunication" table="cms_customer_communication">
+    <id name="pkCommunicationId" type="java.lang.Integer">
+      <column name="CUSTOMER_COMM_ID"/>
+      <generator class="identity"/>
+    </id>
+    
+    <property name="createUser" type="string">
+      <column length="100" name="create_user"/>
+    </property>
+
+    <property name="createTime" type="timestamp">
+      <column length="0" name="create_time"/>
+    </property>
+
+    <property name="updateUser" type="string">
+      <column length="100" name="update_user"/>
+    </property>
+
+    <property name="updateTime" type="timestamp">
+      <column length="0" name="update_time"/>
+    </property>
+    
+    <property name="callDurationSeconds" type="java.lang.Integer">
+    	<column name="call_duration_seconds"/>
+    </property>
+    
+    <property name="dialedNumber" type="string">
+    	<column length="40" name="dialed_number"/>
+    </property>
+    
+    <property name="fkUserId" type="java.lang.Integer">
+        <column name="fk_user_id"></column>
+    </property>
+
+       
+  </class>
+</hibernate-mapping>

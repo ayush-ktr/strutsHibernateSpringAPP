@@ -1,0 +1,49 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!--
+ ~  Copyright 2006-2018 HighRadius Corporation
+ -->
+
+<!-- Generated Dec 21, 2012 10:53:11 AM by Hibernate Tools 3.3.0.GA -->
+<hibernate-mapping>
+   <class name="com.highradius.model.LuFeature" table="lu_feature" >
+       <id name="pkFeatureId" type="java.lang.Integer">
+           <column name="pk_feature_id" />
+           <generator class="identity" />
+       </id>
+       <property name="fkDataTypeId" type="java.lang.Integer">
+           <column name="fk_datatype_id" not-null="true" />
+       </property>
+       <property name="featureName" type="string">
+           <column name="feature_name" not-null="true" />
+       </property>
+       <property name="featureDescription" type="string">
+           <column name="feature_description" />
+       </property>
+       <property name="featureValue" type="string">
+           <column name="feature_value" />
+       </property>
+       <property name="createUser" type="string">
+           <column name="create_user" />
+       </property>
+       <property name="createDate" type="date">
+           <column name="create_date" length="10" />
+       </property>
+       <property name="createTime" type="timestamp">
+           <column name="create_time" length="19" />
+       </property>
+       <property name="updateUser" type="string">
+           <column name="update_user" />
+       </property>
+       <property name="updateDate" type="date">
+           <column name="update_date" length="10" />
+       </property>
+       <property name="updateTime" type="timestamp">
+           <column name="update_time" length="19" />
+       </property>
+       <property name="config" type="string">
+           <column name="config"/>
+       </property>  
+   </class>
+</hibernate-mapping>

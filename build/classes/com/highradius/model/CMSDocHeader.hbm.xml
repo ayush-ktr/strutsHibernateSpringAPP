@@ -1,0 +1,439 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!--
+  ~  Copyright 2006-2018 HighRadius Corporation 
+  -->
+
+<hibernate-mapping>
+	<class
+		name="com.highradius.model.CMSDocHeader"
+		table="cms_doc_header" >
+		<id name="docHeaderId" type="int">
+			<column name="cms_doc_header_id" />
+			<generator class="identity" />
+		</id>
+		<property name="salesInvoiceNumber" type="string">
+      		<column name="sales_invoice_number"/>
+      	</property>
+      	<property name="pkCustomerMapId" type="int">
+      		<column name="fk_customer_map_id"/>
+      	</property>		
+		<property name="fkAccountId" type="int">
+			<column name="fk_account_id"></column>
+		</property>
+		
+		<property name="fkStrategyId" type="int">
+			<column name="fk_strategy_id"></column>
+		</property>
+		
+		<property name="strategyAgingBucketId" type="int">
+			<column name="strategy_aging_bucket_id"></column>
+		</property>
+			
+		<property name="documentNumber" type="java.lang.String">
+			<column name="document_number"></column>
+		</property>
+		
+		<property name="referenceDocNumber" type="java.lang.String">
+			<column name="reference_doc_number"></column>
+		</property>
+		
+		<property name="documentDate" type="date">
+			<column name="document_date"></column>
+		</property>
+		
+		<property name="actualOpenAmount"  type="big_decimal">
+			<column name="actual_open_amount" precision="8"/>
+		</property>
+		
+		<property name="currentOpenAmount" type="big_decimal">
+			<column name="current_open_amount" precision="8"/>
+		</property>
+		
+		<property name="paidAmount" type="big_decimal">
+			<column name="paid_amount" precision="8"/>
+		</property>
+		
+		<property name="paidDate" type="date">
+			<column name="paid_date"></column>
+		</property>
+		<property name="dueDate" type="date">
+			<column name="due_date"></column>
+		</property>
+		
+		<property name="arClearingDateNorm" type="date">
+			<column name="ar_clearing_date_norm"></column>
+		</property>
+		
+		<property name="arDocumentDateNorm" type="date">
+			<column name="ar_document_date_norm"></column>
+		</property>
+		
+		<property name="arDueDateNorm" type="date">
+			<column name="ar_due_date_norm"></column>
+		</property>
+		
+		<property name="daysPastDue" type="int">
+			<column name="dayspast_due"></column>
+		</property>
+		
+		<property name="createUser" type="java.lang.String">
+			<column name="create_user"></column>
+		</property>
+		
+		<property name="updateUser" type="java.lang.String">
+			<column name="update_user"></column>
+		</property>
+		
+		<property name="createTime" type="java.util.Date">
+			<column name="create_time"></column>
+		</property>
+		
+		<property name="updateTime" type="java.util.Date">
+			<column name="update_time"></column>
+		</property>
+		
+		<property name="paymentTerms" type="java.lang.String">
+			<column name="payment_terms"></column>
+		</property>
+		
+		<property name="docFilePath" type="java.lang.String">
+			<column name="document_file_path"></column>
+		</property>
+		
+		<property name="reference" type="java.lang.String">
+			<column name="reference"></column>
+		</property>
+		
+		<property name="referenceKey1" type="java.lang.String">
+			<column name="reference_key1"></column>
+		</property>
+		
+		<property name="referenceKeyLineItem" type="java.lang.String">
+			<column name="reference_key_line_item"></column>
+		</property>
+		
+		<property name="postingKey" type="java.lang.String">
+			<column name="posting_key"></column>
+		</property>
+		
+		<property name="openAmount" type="big_decimal">
+			<column name="open_amount" precision="8"/>
+		</property>
+		
+		<property name="poNumber" type="java.lang.String">
+			<column name="po_number"></column>
+		</property>
+		
+		<property name="currency" type="java.lang.String">
+			<column name="currency"></column>
+		</property>
+		<property name="retainageAmount" type="big_decimal">
+			<column name="retainage_amount" precision="8"/>
+		</property>
+		<property name="isOpen" type="int">
+			<column name="isOpen"></column>
+		</property>
+		<property name="debitCreditIndicator" type="java.lang.String">
+			<column name="debit_credit_indicator"></column>
+		</property>
+		<property name="fiscalYear" type="string">
+      		<column name="fiscal_year"/>
+      	</property>
+      	<property name="noLineItemAcct" type="string">
+      		<column name="no_line_item_acct"/>
+      	</property>
+      	<property name="itemText" type="string">
+      		<column name="item_text"/>
+      	</property>
+      	<property name="reasonCodeName" type="string">
+      		<column name="reason_code_name"/>
+      	</property>      
+		
+		<property name="referenceKey2" type="string">
+      		<column name="reference_key2"/>
+      	</property>
+      	<property name="customerCurrency" type="string">
+      		<column name="customer_currency"/>
+      	</property> 
+      	<property name="localCurrency" type="string">
+      		<column name="local_currency"/>
+      	</property>  
+      	<property name="dualCurrency" type="string">
+      		<column name="dual_currency"/>
+      	</property>  
+ 		<property name="customerActualOpenAmount" type="big_decimal">
+			<column name="customer_actual_open_amount" precision="8"/>
+		</property>
+ 		<property name="dualActualOpenAmount" type="big_decimal">
+			<column name="dual_actual_open_amount" precision="8"/>
+		</property>
+  		<property name="localActualOpenAmount" type="big_decimal">
+			<column name="local_actual_open_amount" precision="8"/>
+		</property>
+  		<property name="dualCurrentOpenAmount" type="big_decimal">
+			<column name="dual_current_open_amount" precision="8"/>
+		</property>
+  		<property name="localCurrentOpenAmount" type="big_decimal">
+			<column name="local_current_open_amount" precision="8"/>
+		</property>
+      	<property name="disputedAmount" type="big_decimal">
+			<column name="disputed_amount" precision="8"/>
+		</property>
+		<property name="validDisputedAmount" type="big_decimal">
+			<column name="valid_disputed_amount" precision="8"/>
+		</property>
+	    <property name="isEscalated" type="int">
+			<column name="is_escalated"></column>
+		</property>
+		<!-- <property name="escalatedTo" type="string">
+			<column name="escalated_to"></column>
+		</property> -->
+		<property name="referenceKey5" type="string">
+      		<column name="reference_key5"/>
+      	</property>
+      	<property name="invoiceAge" type="int">
+      		<column name="invoice_age"/>
+      	</property>
+      	<!-- <property name="latestTask" type="java.lang.String">
+			<column name="latest_task"></column>
+		</property> -->
+		<property name="referenceKey3" type="java.lang.String">
+			<column name="reference_key3"></column>
+		</property>
+	 
+		<property name="cashProjectionDate" type="date">
+			<column name="cash_projection_date"></column>
+		</property>
+		<property name="companyCode" type="string">
+     	 	<column length="100" name="company_code"/>
+        </property>
+        <property name="dunningBlock" type="java.lang.String">
+			<column name="dunning_block"></column>
+		</property>
+        <property name="invoiceDate" type="date">
+			<column name="invoice_date"></column>
+		</property>
+		 <property name="originalDocType" type="java.lang.String">
+			<column name="doctype"></column>
+		</property>
+		<property name="referenceKey6" type="java.lang.String">
+			<column name="reference_key6"></column>
+		</property>
+		<property name="referenceKey7" type="java.lang.String">
+			<column name="reference_key7"></column>
+		</property>
+		<property name="referenceKey8" type="java.lang.String">
+			<column name="reference_key8"></column>
+		</property>
+		<property name="referenceKey4" type="java.lang.String">
+			<column name="reference_key4"></column>
+		</property>
+		<property name="lastPaymentDate" type="date">
+			<column name="last_payment_date"></column>
+		</property>
+		<property name="firstPaymentDate" type="date">
+			<column name="first_payment_date"></column>
+		</property>
+		<property name="daysToPay" type="int">
+			<column name="days_to_pay"></column>
+		</property>
+				<property name="assignmentId" type="java.lang.String">
+			<column name="assignment_id"></column>
+		</property>
+			<property name="referenceKey9" type="java.lang.String">
+			<column name="reference_key9"></column>
+		</property>
+			<property name="referenceKey10" type="java.lang.String">
+			<column name="reference_key10"></column>
+		</property>
+			<property name="referenceKey11" type="java.lang.String">
+			<column name="reference_key11"></column>
+		</property>
+			<property name="referenceKey12" type="java.lang.String">
+			<column name="reference_key12"></column>
+		</property>
+		<property name="salesInvoiceNumberNorm" type="string">
+      		<column name="sales_invoice_number_norm"/>
+      	</property>
+      	<property name="documentNumberNorm" type="string">
+      		<column name="document_number_norm"/>
+      	</property>
+		<property name="validOpenAmount" type="big_decimal">
+			<column name="valid_open_amount" precision="8"/>
+		</property>
+		<!-- <property name="latestUserAction" type="java.lang.String">
+			<column name="latest_user_action"></column>
+		</property> -->
+		<property name="updateDate" type="date">
+			<column name="update_date"></column>
+		</property>
+		<property name="createDate" type="date">
+			<column name="create_date"></column>
+		</property>
+ 		<property name="isValidDispute" type="int">
+			<column name="isValid_dispute"></column>
+		</property>	
+		<property name="disputeStatus" type="java.lang.String">
+			<column name="dispute_status"></column>
+		</property>
+		<property name="referenceKey13" type="java.lang.String">
+			<column name="reference_key13"></column>
+		</property>
+		<property name="referenceKey14" type="java.lang.String">
+			<column name="reference_key14"></column>
+		</property>
+		<property name="referenceKey15" type="java.lang.String">
+			<column name="reference_key15"></column>
+		</property>
+		<property name="referenceKey16" type="java.lang.String">
+			<column name="reference_key16"></column>
+		</property>
+		<property name="referenceKey17" type="java.lang.String">
+			<column name="reference_key17"></column>
+		</property>
+		<property name="referenceKey18" type="java.lang.String">
+			<column name="reference_key18"></column>
+		</property>
+		<property name="referenceKey19" type="java.lang.String">
+			<column name="reference_key19"></column>
+		</property>
+		<property name="referenceKey20" type="java.lang.String">
+			<column name="reference_key20"></column>
+		</property>
+		<property name="referenceKey21" type="java.lang.String">
+			<column name="reference_key21"></column>
+		</property>
+		<property name="referenceKey22" type="java.lang.String">
+			<column name="reference_key22"></column>
+		</property>
+		<property name="referenceKey23" type="java.lang.String">
+			<column name="reference_key23"></column>
+		</property>
+		<property name="referenceKey24" type="java.lang.String">
+			<column name="reference_key24"></column>
+		</property>
+		<property name="referenceKey25" type="java.lang.String">
+			<column name="reference_key25"></column>
+		</property>
+		<property name="referenceKey26" type="java.lang.String">
+			<column name="reference_key26"></column>
+		</property>
+		<property name="referenceKey27" type="java.lang.String">
+			<column name="reference_key27"></column>
+		</property>
+		<property name="referenceKey28" type="java.lang.String">
+			<column name="reference_key28"></column>
+		</property>
+		<property name="referenceKey29" type="java.lang.String">
+			<column name="reference_key29"></column>
+		</property>
+		<property name="referenceKey30" type="java.lang.String">
+			<column name="reference_key30"></column>
+		</property>
+		<property name="referenceKey31" type="java.lang.String">
+			<column name="reference_key31"></column>
+		</property>
+		<property name="referenceKey32" type="java.lang.String">
+			<column name="reference_key32"></column>
+		</property>
+		<property name="referenceKey33" type="java.lang.String">
+			<column name="reference_key33"></column>
+		</property>
+		<property name="referenceKey34" type="java.lang.String">
+			<column name="reference_key34"></column>
+		</property>
+		<property name="referenceKey35" type="java.lang.String">
+			<column name="reference_key35"></column>
+		</property>
+		<property name="referenceKey36" type="java.lang.String">
+			<column name="reference_key36"></column>
+		</property>
+		<property name="referenceKey37" type="java.lang.String">
+			<column name="reference_key37"></column>
+		</property>
+		<property name="referenceKey38" type="java.lang.String">
+			<column name="reference_key38"></column>
+		</property>
+		<property name="referenceKey39" type="java.lang.String">
+			<column name="reference_key39"></column>
+		</property>
+		<property name="referenceKey40" type="java.lang.String">
+			<column name="reference_key40"></column>
+		</property>
+		<property name="decimalField1"  type="big_decimal">
+			<column name="decimal_field1" precision="8"/>
+		</property>
+		<property name="decimalField2"  type="big_decimal">
+			<column name="decimal_field2" precision="8"/>
+		</property>
+		<property name="decimalField3"  type="big_decimal">
+			<column name="decimal_field3" precision="8"/>
+		</property>
+		<property name="decimalField4"  type="big_decimal">
+			<column name="decimal_field4" precision="8"/>
+		</property>
+		<property name="decimalField5"  type="big_decimal">
+			<column name="decimal_field5" precision="8"/>
+		</property>
+		<property name="decimalField6"  type="big_decimal">
+			<column name="decimal_field6" precision="8"/>
+		</property>
+		<property name="dateField1"  type="date">
+			<column name="date_field1"></column>
+		</property>
+		<property name="dateField2"  type="date">
+			<column name="date_field2"></column>
+		</property>
+		<property name="hasAttachment" type="int">
+			<column name="hasAttachment"></column>
+		</property>
+		<property name="baselineDate" type="date">
+			<column name="baseline_date"></column>
+		</property>
+		<property name="documentFileClassifier" type="string">
+      		<column name="document_file_classifier"/>
+      	</property>
+      	<property name="invAmtGlobalNorm" type="big_decimal">
+      		<column name="inv_amt_global_norm"/>
+    	</property>
+    	<property name="openAmtGlobalNorm" type="big_decimal">
+      		<column name="open_amt_global_norm"/>
+    	</property>
+    	<property name="globalCurrency" type="string">
+      		<column name="global_currency"/>
+      	</property>
+      	<property name="glIndicator" type="string">
+            <column length="45" name="gl_indicator"/>
+        </property>
+        <property name="glAccountNumber" type="string">
+            <column length="100" name="gl_account_number"/>
+        </property>
+      	
+		<property name="customerId" type="int">
+      		<column name="customer_id"/>
+      	</property>
+		<property name="discountDate1Norm" type="java.util.Date">
+			<column name="discount_date_1_norm"></column>
+		</property>
+		<property name="discountDate2Norm" type="java.util.Date">
+			<column name="discount_date_2_norm"></column>
+		</property>
+		<property name="paidAmtDocCurr" type="big_decimal">
+			<column name="paid_amount_in_doc_curr" precision="8"/>
+		</property>
+		<property name="paidAmtLocalCurr" type="big_decimal">
+			<column name="paid_amount_in_local_curr" precision="8"/>
+		</property>
+		<property name="paidAmtGlobalCurr" type="big_decimal">
+			<column name="paid_amount_in_global_curr" precision="8"/>
+		</property>
+		<property name="hasDirectDebitFailure" type="int">
+			<column name="has_direct_debit_failure"></column>
+		</property>
+		<property name="directDebitFailureDate" type="java.util.Date">
+			<column name="direct_debit_failure_date"></column>
+		</property>
+	 	</class>
+		</hibernate-mapping>
+

@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+   "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+   "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+<constant name="struts.action.excludePattern" value="/squareServlet/?.*"/>
+	<package name="default" namespace="/" extends="struts-default">
+		<action name="getCallerId"
+			class="com.struts.training.action.DBSearchAction" method="get">
+			<result name="success">/output.jsp</result>
+			<result name="failure">/output.jsp</result>
+		</action>
+		<action name="getUserMaskingDetails"
+			class="com.struts.training.action.DBSearchAction" method="getUserMaskingDetails">
+			<result name="success">/output.jsp</result>
+			<result name="failure">/output.jsp</result>
+		</action>
+		<action name="updateMaskingStatus"
+			class="com.struts.training.action.DBSearchAction" method="updateMaskingStatus">
+			<result name="success">/output.jsp</result>
+			<result name="failure">/output.jsp</result>
+		</action>
+		<action name="CSVSearch"
+			class="com.struts.training.action.TrainingAction">
+			<result name="success">/index.jsp</result>
+			<result name="failure">/index.jsp</result>
+		</action>
+		<action name="DBSearch"
+			class="com.struts.training.action.DBSearchAction">
+			<result name="success">/index.jsp</result>
+			<result name="failure">/index.jsp</result>
+		</action>
+	</package>
+	<package name="jsonResponse" namespace="/jsonResponse"
+		extends="json-default">
+		<action name="getMovies"
+			class="com.struts.training.action.DBSearchAction"
+			method="getMovieData">
+			<result type="json" />
+		</action>
+		<action name="searchMovies"
+			class="com.struts.training.action.DBSearchAction">
+			<result type="json" />
+		</action>
+		<action name="getCallerId"
+			class="com.struts.training.action.DBSearchAction" method="get">
+			<result type="json" />
+		</action>
+	</package>
+	<package name="DBDataAlter" namespace="/alterData/local"
+		extends="struts-default">
+		<action name="addDataToDB"
+			class="com.struts.training.action.WriteToDBAction">
+			<result name="success">/index.jsp</result>
+			<result name="failure">/index.jsp</result>
+		</action>
+		<action name="deleteDataFromDB"
+			class="com.struts.training.action.WriteToDBAction"
+			method="deleteDataFromDB">
+			<result name="success">/index.jsp</result>
+			<result name="failure">/index.jsp</result>
+		</action>
+	</package>
+	<package name="User" namespace="/extjs"
+		extends="struts-default">
+		<action name="loginpage"
+			class="com.struts.training.action.UserAction" method="openLoginPage">
+			<result name="success">/login.jsp</result>
+			<result name="failure">/login.jsp</result>
+		</action>
+		<action name="home"
+			class="com.struts.training.action.UserAction" method="openHomePage">
+			<result name="success">/home.jsp</result>
+			<result name="success">/home.jsp</result>
+		</action>
+		<action name="createAUser"
+			class="com.struts.training.action.UserAction" method="createANewUser">
+			<result name="success">/StrutsHibernateApp/WebContent/Resources/success.jsp</result>
+			<result name="failure">/StrutsHibernateApp/WebContent/Resources/failure.jsp</result>
+		</action>
+		<action name="loginRequest"
+			class="com.struts.training.action.UserAction" method="login">
+			<result name="success">/StrutsHibernateApp/WebContent/Resources/success.jsp</result>
+			<result name="failure">/StrutsHibernateApp/WebContent/Resources/failure.jsp</result>
+		</action>
+		<action name="isUserNameAvailable"
+			class="com.struts.training.action.UserAction"
+			method="isUserNameAvailable">
+			<result name="success">/StrutsHibernateApp/WebContent/Resources/success.jsp</result>
+			<result name="failure">/StrutsHibernateApp/WebContent/Resources/failure.jsp</result>
+		</action>
+	</package>
+</struts>

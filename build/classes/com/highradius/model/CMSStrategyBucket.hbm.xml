@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- ~ Copyright 2006-2018 HighRadius Corporation -->
+
+<hibernate-mapping>
+
+	<class name="com.highradius.model.CMSStrategyBucket"
+		table="cms_strategy_bucket">
+		<id name="pkStrategyBucketId" type="java.lang.Integer">
+			<column name="strategy_bucket_id" />
+			<generator class="identity" />
+		</id>
+		<property name="accountId" type="int">
+			<column name="fk_account_id" not-null="true" />
+		</property>
+		<property name="agingBucketId" type="int">
+			<column name="aging_bucket_id" not-null="true" />
+		</property>
+
+		<property name="fkStrategyId" type="int">
+			<column name="fk_strategy_id" not-null="true" />
+		</property>
+		<property name="fkBucketTypeId" type="int">
+			<column name="fk_bucket_type_id" not-null="true" />
+		</property>
+
+		<property name="lowValue" type="int">
+			<column name="low_value" not-null="true" />
+		</property>
+		<property name="highValue" type="java.lang.Integer">
+			<column name="high_value" not-null="false" />
+		</property>
+		<property name="createUser" type="string">
+			<column name="create_user" />
+		</property>
+		<property name="createTime" type="timestamp">
+			<column length="0" name="create_time" />
+		</property>
+		<property name="updateUser" type="string">
+			<column name="update_user" />
+		</property>
+		<property name="updateTime" type="timestamp">
+			<column length="0" name="update_time" />
+		</property>
+
+	</class>
+</hibernate-mapping>

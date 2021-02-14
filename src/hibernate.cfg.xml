@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+		"-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+		"http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+    <session-factory>
+        <property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
+        <property name="hibernate.connection.password">GG99PqMc3!y</property>
+        <property name="hibernate.connection.url">jdbc:mysql://10.1.1.47:3306/collectionstovo</property>
+        <property name="hibernate.connection.username">temp_user</property>
+        <property name="hibernate.default_schema">collectionstovo</property>
+        <property name="hibernate.dialect">org.hibernate.dialect.MySQLInnoDBDialect</property>
+        <property name="show_sql">true</property>
+        <property name="format_sql">true</property> 
+        <mapping resource="com/highradius/model/LuFeature.hbm.xml"/>
+        <mapping resource="com/highradius/model/MapAccountFeature.hbm.xml"/>
+        <mapping resource="com/highradius/model/Country.hbm.xml"/>
+        <mapping resource="com/highradius/model/CMSUserVirtualNumber.hbm.xml"/>
+        <mapping resource="com/highradius/model/City.hbm.xml"/>
+        <mapping resource="com/highradius/model/CMSUserCallerID.hbm.xml"/>
+        <mapping resource="com/highradius/model/CustomerContact.hbm.xml"/>
+        <mapping resource="com/highradius/model/CmsCustomerAgentDerivedFields.hbm.xml"/>
+        <mapping resource="com/highradius/model/CMSCustomerCommunication.hbm.xml"/>
+        <mapping resource="com/highradius/model/CMSDocHeader.hbm.xml"/>
+        <mapping resource="com/highradius/model/CMSStrategyBucket.hbm.xml"/>
+        <mapping class="com.highradius.model.Movie"/>
+        <mapping class="com.highradius.model.Ratings"/>
+        <mapping class="com.highradius.model.LuUser"/>
+        <mapping class="com.highradius.model.CustomerContact"/>
+    </session-factory>
+</hibernate-configuration>
